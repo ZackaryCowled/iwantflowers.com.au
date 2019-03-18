@@ -5,37 +5,35 @@ var table = document.getElementById("product-table");
 if(search.addEventListener != null) {
     search.addEventListener("keyup", OnSearchChange);
 } else {
-    //Will need to use attachEvent? for IE8< and moveRow for sorting/filtering but test first...
-    console.warn("Support for filtering has not been implemented for your browser yet.");
+    search.attachEvent("onkeyup", OnSearchChange);
 }
 
 if(sort.addEventListener != null) {
     sort.addEventListener("change", OnSortChange);
 } else {
-    console.warn("Support for sorting has not been implemented for your browser yet.");
+    sort.attachEvent("onchange", OnSortChange);
 }
 
 function OnSearchChange(event) {
-    var searchString = event.target.value.toLowerCase();
-
-    if(searchString.length === 0) {
-        for(var i = 0; i < table.rows.length; i++) {
-            table.rows[i].classList.remove("hide");
-        }
-        return;
-    }
+    var target = event.srcElement || event.target;
+    var searchString = target.value.toLowerCase();
 
     for(var i = 0; i < table.rows.length; i++) {
-        if(table.rows[i].getAttribute("name").includes(searchString)) {
-            table.rows[i].classList.remove("hide");
+        if(table.rows[i].getAttribute("name").indexOf(searchString) > -1) {
+            var classIndex = table.rows[i].className.indexOf(" hide");
+            if(classIndex > -1) {
+                table.rows[i].className = (table.rows[i].className.substring(0, classIndex) + table.rows[i].className.substring(classIndex + 4));
+            }
         } else {
-            table.rows[i].classList.add("hide");
+            if(table.rows[i].className.indexOf(" hide") === -1) {
+                table.rows[i].className += " hide";
+            }
         }
     }
 }
 
 function OnSortChange(event) {
-    switch(event.target.value) {
+    switch(event.srcElement.value || event.target.value) {
         case "high-to-low": SortHighToLow();
             break;
         case "low-to-high": SortLowToHigh();
