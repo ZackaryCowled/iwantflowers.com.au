@@ -9,27 +9,26 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css">
 </head>
 <body>
-    <header>
+    <div class="header">
         <h1 class="logo"><a href="index.html">I Want Flowers</a></h1>
-        <nav class="menu">
+        <div class="menu">
             <ul>
                 <li><a class="btn" href="#">Products</a></li>
                 <li><a class="btn" href="locations.html">Locations</a></li>
                 <li><a class="btn" href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
     
-    <main>
-        <article class="content">
+        <div class="content">
             <h2>Products</h2>
-            <section class="full-width filter">
+            <div class="full-width filter">
                 <div class="pull-right">
-                    <aside>
+                    <div class="filter-item">
                         <label for="search">Quick Search</label><br>
                         <input type="text" name="search" id="search">
-                    </aside>
-                    <aside>
+                    </div>
+                    <div class="filter-item">
                         <label for="sort">Sort By</label><br>
                         <select name="sort" id="sort">
                             <option value="default">Default</option>
@@ -38,131 +37,113 @@
                             <option value="a-z">Product Name (A-Z)</option>
                             <option value="z-a">Product Name (Z-A)</option>
                         </select>
-                    </aside>
+                    </div>
                 </div>
-            </section>
-            <section>
-                <table id="product-table">
-                    <tr name="white rose" price="14.95" order="0">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="White Rose" src="img/white-rose.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-label">
-                            <h3>White Rose</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$14.95</strong></p>
-                        </td>
-                    </tr>
-                    <tr name="water lilly" price="14.95" order="1">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="Water Lilly" src="img/water-lilly.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-label">
-                            <h3>Water Lilly</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$14.95</strong></p>
-                        </td>
-                    </tr>
-                    <tr name="pink oasis" price="19.95" order="2">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="Pink Oasis" src="img/pink-oasis.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-label">
-                            <h3>Pink Oasis</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$19.95</strong></p>
-                        </td>
-                    </tr>
-                    <tr name="sunflower" price="4.95" order="3">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="Sunflower" src="img/sun-flower.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-label">
-                            <h3>Sunflower</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$4.95</strong></p>
-                        </td>
-                    </tr>
-                    <tr name="pink lotus" price="19.95" order="4">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="Pink Lotus" src="img/pink-lotus.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-label">
-                            <h3>Pink Lotus</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$19.95</strong></p>
-                        </td>
-                    </tr>
-                    <tr name="peace lilly" price="9.95" order="5">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="Peace Lilly" src="img/peace-lilly.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-description">
-                            <h3>Peace Lilly</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$9.95</strong></p>
-                        </td>
-                    </tr>
-                    <tr name="pink tulips" price="29.95" order="6">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="Pink Tulips" src="img/pink-tulips.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-description">
-                            <h3>Pink Tulips</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$29.95</strong></p>
-                        </td>
-                    </tr>
-                    <tr name="white & pink bouquet" price="34.95" order="7">
-                        <td class="product-image">
-                            <figure>
-                                <img alt="White & Pink Bouquet" src="img/white-pink-bouquet.jpg">
-                            </figure>
-                        </td>
-                        <td class="product-description">
-                            <h3>White & Pink Bouquet</h3>
-                            <p>Product Description</p>
-                        </td>
-                        <td class="product-price">
-                            <p><strong>$34.95</strong></p>
-                        </td>
-                    </tr>
-                </table>
-            </section>
-        </article>
-    </main>
+            </div>
+            
+            <table id="product-table">
+                <tr name="white rose" price="14.95" order="0">
+                    <td class="product-image">
+                        <img alt="White Rose" src="img/white-rose.jpg">
+                    </td>
+                    <td class="product-label">
+                        <h3>White Rose</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$14.95</strong></p>
+                    </td>
+                </tr>
+                <tr name="water lilly" price="14.95" order="1">
+                    <td class="product-image">
+                        <img alt="Water Lilly" src="img/water-lilly.jpg">
+                    </td>
+                    <td class="product-label">
+                        <h3>Water Lilly</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$14.95</strong></p>
+                    </td>
+                </tr>
+                <tr name="pink oasis" price="19.95" order="2">
+                    <td class="product-image">
+                        <img alt="Pink Oasis" src="img/pink-oasis.jpg">
+                    </td>
+                    <td class="product-label">
+                        <h3>Pink Oasis</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$19.95</strong></p>
+                    </td>
+                </tr>
+                <tr name="sunflower" price="4.95" order="3">
+                    <td class="product-image">
+                        <img alt="Sunflower" src="img/sun-flower.jpg">
+                    </td>
+                    <td class="product-label">
+                        <h3>Sunflower</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$4.95</strong></p>
+                    </td>
+                </tr>
+                <tr name="pink lotus" price="19.95" order="4">
+                    <td class="product-image">
+                        <img alt="Pink Lotus" src="img/pink-lotus.jpg">
+                    </td>
+                    <td class="product-label">
+                        <h3>Pink Lotus</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$19.95</strong></p>
+                    </td>
+                </tr>
+                <tr name="peace lilly" price="9.95" order="5">
+                    <td class="product-image">
+                        <img alt="Peace Lilly" src="img/peace-lilly.jpg">
+                    </td>
+                    <td class="product-description">
+                        <h3>Peace Lilly</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$9.95</strong></p>
+                    </td>
+                </tr>
+                <tr name="pink tulips" price="29.95" order="6">
+                    <td class="product-image">
+                        <img alt="Pink Tulips" src="img/pink-tulips.jpg">
+                    </td>
+                    <td class="product-description">
+                        <h3>Pink Tulips</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$29.95</strong></p>
+                    </td>
+                </tr>
+                <tr name="white & pink bouquet" price="34.95" order="7">
+                    <td class="product-image">
+                        <img alt="White & Pink Bouquet" src="img/white-pink-bouquet.jpg">
+                    </td>
+                    <td class="product-description">
+                        <h3>White & Pink Bouquet</h3>
+                        <p>Product Description</p>
+                    </td>
+                    <td class="product-price">
+                        <p><strong>$34.95</strong></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-    <footer>
+    <div class="footer">
         <p>Copyright &copy; 2019 Skillage I.T.</p>
-    </footer>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

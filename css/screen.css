@@ -4,12 +4,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-header {
+.header {
     background-color: #731E5A;
     height: 5em;
 }
 
-header h1 {
+.header h1 {
     margin: 0 1em;
     font-size: 2em;
     line-height: 2.5em;
@@ -86,7 +86,7 @@ header h1 {
     height: 4em;
 }
 
-.filter aside {
+.filter-item {
     float: left;
     margin: 0.5em 1em;
     line-height: 1.25em;
@@ -158,6 +158,7 @@ label {
 .address {
     width: 30%;
     position: relative;
+    float: left;
 }
 
 .address h3 {
@@ -167,10 +168,12 @@ label {
 
 .contact {
     width: 30%;
+    float: left;
 }
 
 .hours {
     width: 30%;
+    float: left;
 }
 
 .location-image {
@@ -178,6 +181,7 @@ label {
     height: auto;
     position: relative;
     top: -5em;
+    float: left;
 }
 
 form {
@@ -193,12 +197,12 @@ form button {
     margin: 0 auto;
 }
 
-footer {
+.footer {
     background-color: #BE3291;
     height: 5em;
 }
 
-footer p {
+.footer p {
     color: #FFF;
     margin: auto;
     font-size: 0.7em;
