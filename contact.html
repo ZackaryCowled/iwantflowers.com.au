@@ -25,16 +25,15 @@
         <p>
             Got a question? We'd love to hear from you. Fill out the form below to send us a message or alternatively send us an email at <a href="mailto:website@iwantflowers.com.au">website@iwantflowers.com.au</a>.
         </p>
-        <!-- TODO: Improve form using attributes, also make sure values are correct when submitted -->
-        <form>
-            <label for="first-name">First Name</label><br>
-            <input type="text" name="first-name" id="first-name"><br><br>
-            <label for="last-name">Last Name</label><br>
-            <input type="text" name="last-name" id="last-name"><br><br>
-            <label for="email">Email</label><br>
-            <input type="email" name="email" id="email"><br><br>
+        <form method="post">
+            <label for="first-name">First Name*</label><br>
+            <input type="text" name="first-name" id="first-name" maxlength="24" required><br><br>
+            <label for="last-name">Last Name*</label><br>
+            <input type="text" name="last-name" id="last-name" maxlength="24" required><br><br>
+            <label for="email">Email*</label><br>
+            <input type="email" name="email" id="email" maxlength="320" required><br><br>
             <label for="phone">Phone</label><br>
-            <input type="tel" name="phone" id="phone"><br><br>
+            <input type="tel" name="phone" id="phone" maxlength="24"><br><br>
             <label for="location">Location</label><br>
             <select name="location" id="location">
                 <option value="sydney">Sydney</option>
@@ -49,9 +48,9 @@
                 <option value="feedback">Feedback</option>
                 <option value="other">Other</option>
             </select><br><br>
-            <label for="message">Message</label><br>
-            <textarea name="message" id="message"></textarea><br><br>
-            <button class="btn">Send</button><br>
+            <label for="message">Message*</label><br>
+            <textarea name="message" id="message" rows="5" maxlength="918" required></textarea><br><br>
+            <input class="btn" type="submit" value="Send">
         </form>
     </div>
 
