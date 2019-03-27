@@ -19,7 +19,7 @@ function OnSearchChange(event) {
     var searchString = target.value.toLowerCase();
 
     for(var i = 0; i < table.rows.length; i++) {
-        if(table.rows[i].getAttribute("name").indexOf(searchString) > -1) {
+        if(table.rows[i].getAttribute("data-name").indexOf(searchString) > -1) {
             var classIndex = table.rows[i].className.indexOf(" hide");
             if(classIndex > -1) {
                 table.rows[i].className = (table.rows[i].className.substring(0, classIndex) + table.rows[i].className.substring(classIndex + 4));
@@ -51,11 +51,11 @@ function SortHighToLow() {
     var highestValue, highestIndex, value;
 
     for(var i = 0; i < table.rows.length; i++) {
-        highestValue = parseInt(table.rows[i].getAttribute("price"));
+        highestValue = parseInt(table.rows[i].getAttribute("data-price"));
         highestIndex = i;
 
         for(var j = i + 1; j < table.rows.length; j++) {
-            value = parseInt(table.rows[j].getAttribute("price"));
+            value = parseInt(table.rows[j].getAttribute("data-price"));
 
             if(value > highestValue) {
                 highestValue = value;
@@ -73,11 +73,11 @@ function SortLowToHigh() {
     var lowestValue, lowestIndex, value;
 
     for(var i = 0; i < table.rows.length; i++) {
-        lowestValue = parseInt(table.rows[i].getAttribute("price"));
+        lowestValue = parseInt(table.rows[i].getAttribute("data-price"));
         lowestIndex = i;
 
         for(var j = i + 1; j < table.rows.length; j++) {
-            value = parseInt(table.rows[j].getAttribute("price"));
+            value = parseInt(table.rows[j].getAttribute("data-price"));
 
             if(value < lowestValue) {
                 lowestValue = value;
@@ -95,11 +95,11 @@ function SortAscending() {
     var lowestValue, lowestIndex, value;
 
     for(var i = 0; i < table.rows.length; i++) {
-        lowestValue = table.rows[i].getAttribute("name");
+        lowestValue = table.rows[i].getAttribute("data-name");
         lowestIndex = i;
 
         for(var j = i + 1; j < table.rows.length; j++) {
-            value = table.rows[j].getAttribute("name");
+            value = table.rows[j].getAttribute("data-name");
 
             if(value < lowestValue) {
                 lowestValue = value;
@@ -117,11 +117,11 @@ function SortDescending() {
     var highestValue, highestIndex, value;
 
     for(var i = 0; i < table.rows.length; i++) {
-        highestValue = table.rows[i].getAttribute("name");
+        highestValue = table.rows[i].getAttribute("data-name");
         highestIndex = i;
 
         for(var j = i + 1; j < table.rows.length; j++) {
-            value = table.rows[j].getAttribute("name");
+            value = table.rows[j].getAttribute("data-name");
 
             if(value > highestValue) {
                 highestValue = value;
@@ -139,11 +139,11 @@ function SortDefault() {
     var lowestValue, lowestIndex, value;
 
     for(var i = 0; i < table.rows.length; i++) {
-        lowestValue = parseInt(table.rows[i].getAttribute("order"));
+        lowestValue = parseInt(table.rows[i].getAttribute("data-order"));
         lowestIndex = i;
 
         for(var j = i + 1; j < table.rows.length; j++) {
-            value = parseInt(table.rows[j].getAttribute("order"));
+            value = parseInt(table.rows[j].getAttribute("data-order"));
 
             if(value < lowestValue) {
                 lowestValue = value;

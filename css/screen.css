@@ -139,12 +139,12 @@ label {
     margin-left: 2em;
 }
 
-#location-list {
+.location {
     width: 100%;
     list-style: none;
 }
 
-#location-list li {
+.location li {
     min-width: 45%;
     margin: 0 4% 3em 0;
     display: inline-block;
